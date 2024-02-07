@@ -3,7 +3,7 @@ sources:
   - name: gz_raw
     schema: gz_raw_data
     description: "First dbt model"
-    tables: 
+    tables:
       - name: sales
         identifier: raw_gz_sales
         description: sales
@@ -16,17 +16,15 @@ sources:
         columns:
           - name: products_id
             description: id of products
-            tests: 
+            tests:
               - unique
               - not_null
       - name: ship
         identifier: raw_gz_ship
         description: ship
-        columns: 
+        columns:
           - name: orders_id
             description: id of orders
-            tests: 
+            tests:
               - unique
               - not_null
-                  
-        
